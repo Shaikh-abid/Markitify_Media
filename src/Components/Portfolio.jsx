@@ -9,7 +9,7 @@ import portfolio4 from "@/app/portfolio4.jpg";
 const Portfolio = () => {
   return (
     <div className="lg:mt-44 mt-14 lg:mb-60">
-      <div className="container mx-auto bg-white lg:shadow-2xl py-8 lg:rounded-2xl">
+      <div className="container mx-auto  py-8">
         <div className="lg:w-[227px] lg:h-[120px] lg:ml-16 text-center">
           <h1 className="font-semibold text-[36px]">Our Portfolio</h1>
           <p className="font-medium lg:text-[12px] mt-4 tracking-widest lg:text-left">

@@ -12,15 +12,15 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="lg:w-[1330px] w-[300px]  h-[2px]  bg-[#A2A2A2] container mx-auto"></div>
+      <div className="lg:w-[1332px] w-[300px]  h-[2px]  bg-[#A2A2A2] container mx-auto"></div>
       <div className="w-full h-2/5 grid lg:grid-cols-3 lg:grid-rows-1">
-        <div className=" hidden lg:block">
-          <Image src={footer} />
+        <div className=" hidden lg:block lg:w-[475px] lg:h-[443px] relative">
+          <Image src={footer} alt="footer_logo" className="absolute bottom-0"/>
         </div>
 
         <div className=" flex flex-col">
           <div className="flex  py-auto justify-evenly  mt-16 lg:mb-16">
-            <div className="font-semibold lg:text-[20px] text-[#818181]">
+            <div className="font-medium lg:text-[16px] text-[#818181]">
               <Link href={"/about"}>
                 <p className="hover:text-[#302e2e] transition-all duration-300">
                   About
@@ -37,7 +37,7 @@ const Footer = () => {
                 </p>
               </Link>
             </div>
-            <div className="font-semibold lg:text-[20px] text-[#818181]">
+            <div className="font-medium lg:text-[16px] text-[#818181]">
               <Link href={"/"}>
                 <p className="hover:text-[#302e2e] transition-all duration-300">
                   Portfolio
@@ -58,13 +58,13 @@ const Footer = () => {
 
           <div className=" flex flex-col items-center justify-end">
             <div className="flex gap-6 lg:mt-20 mt-10">
-              <Image src={insta} width={34} height={34} alt="insta" />
-              <Image src={linkdin} width={34} height={34} alt="linkedin" />
-              <Image src={facebook} width={34} height={34} alt="facebook" />
-              <Image src={dis} width={34} height={34} alt="insta" />
+              <Image src={insta} width={25} height={25} alt="insta" />
+              <Image src={linkdin} width={25} height={25} alt="linkedin" />
+              <Image src={facebook} width={25} height={25} alt="facebook" />
+              <Image src={dis} width={25} height={25} alt="insta" />
             </div>
 
-            <p className=" lg:text-[20px] pb-10 font-semibold pt-6">
+            <p className=" lg:text-[16px] pb-10 font-normal pt-6 text-[12px]">
               Markitify.in© Copyright 2023 All Rights Reserved
             </p>
           </div>
@@ -82,7 +82,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <p className="w-[294px] lg:text-[20px] text-[19px] pb-10 font-semibold">
+          <p className="lg:w-[294px] lg:h-[30px] text-[#000000] lg:text-[20px] text-[19px]  font-normal">
             Designed with ❤️ by markitify
           </p>
         </div>
