@@ -12,14 +12,20 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="lg:w-[1332px] w-[300px]  h-[2px]  bg-[#A2A2A2] container mx-auto"></div>
-      <div className="w-full h-2/5 grid lg:grid-cols-3 lg:grid-rows-1">
-        <div className=" hidden lg:block lg:w-[475px] lg:h-[443px] relative">
-          <Image src={footer} alt="footer_logo" className="absolute bottom-0"/>
+      <div className="lg:w-[1330px] w-[300px]  h-[2px]  bg-[#A2A2A2] container mx-auto"></div>
+      <div className="w-full h-2/5 grid lg:grid-cols-3 lg:grid-rows-1 ">
+        <div className="hidden lg:block relative">
+          <Image
+            src={footer}
+            alt="footerImage"
+            className=" absolute bottom-0"
+            width={475.82}
+            height={443.48}
+          />
         </div>
 
-        <div className=" flex flex-col">
-          <div className="flex  py-auto justify-evenly  mt-16 lg:mb-16">
+        <div className=" flex flex-col ">
+          <div className="flex py-auto justify-evenly mt-16 lg:mb-16 relative lg:-left-44 lg:top-16">
             <div className="font-medium lg:text-[16px] text-[#818181]">
               <Link href={"/about"}>
                 <p className="hover:text-[#302e2e] transition-all duration-300">
@@ -43,8 +49,8 @@ const Footer = () => {
                   Portfolio
                 </p>
               </Link>
-              <Link href={"#"}>
-                <p className="hover:text-[#302e2e] transition-all duration-300">
+              <Link href={"/"}>
+                <p className="hover:text-[#302e2e] transition-all duration-300 ">
                   Carrier
                 </p>
               </Link>
@@ -56,21 +62,69 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col items-center justify-end">
+          <div className=" flex flex-col items-center justify-end relative lg:-top-10">
             <div className="flex gap-6 lg:mt-20 mt-10">
-              <Image src={insta} width={25} height={25} alt="insta" />
-              <Image src={linkdin} width={25} height={25} alt="linkedin" />
-              <Image src={facebook} width={25} height={25} alt="facebook" />
-              <Image src={dis} width={25} height={25} alt="insta" />
+              <Link
+                href={
+                  "https://www.instagram.com/markitify.in?igsh=MXZndGhzZ29sbW5qZA=="
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={insta}
+                  width={25}
+                  height={25}
+                  alt="insta"
+                  className="hover:scale-125 transition-all duration-300"
+                />
+              </Link>
+
+              <Link
+                href={"https://www.linkedin.com/company/markitifymedia-agency/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={linkdin}
+                  width={29}
+                  height={29}
+                  alt="linkedin"
+                  className="hover:scale-125 transition-all duration-300"
+                />
+              </Link>
+
+              <Link href={"/"}>
+                <Image
+                  src={facebook}
+                  width={27}
+                  height={27}
+                  alt="facebook"
+                  className="hover:scale-125 transition-all duration-300"
+                />
+              </Link>
+              <Link
+                href={"https://discord.gg/YcayQadT"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={dis}
+                  width={28}
+                  height={28}
+                  alt="insta"
+                  className="hover:scale-125 transition-all duration-300"
+                />
+              </Link>
             </div>
 
-            <p className=" lg:text-[16px] pb-10 font-normal pt-6 text-[12px]">
-              Markitify.in© Copyright 2023 All Rights Reserved
+            <p className=" lg:text-[16px] pb-10 font-normal text-[#000000] pt-6 text-[14px]">
+              Markitify.in© Copyright 2025 All Rights Reserved
             </p>
           </div>
         </div>
 
-        <div className=" flex flex-col items-center justify-end ">
+        <div className=" flex flex-col items-center justify-end relative lg:-top-10">
           <div className="w-[241px] h-[100px] lg:w-[341px] lg:h-[129px]">
             <Link href={"/"}>
               <Image
@@ -82,8 +136,8 @@ const Footer = () => {
             </Link>
           </div>
 
-          <p className="lg:w-[294px] lg:h-[30px] text-[#000000] lg:text-[20px] text-[19px]  font-normal">
-            Designed with ❤️ by markitify
+          <p className="w-[320px] lg:text-[20px] text-[19px] pb-10 font-normal text-[#000000]">
+            Designed with ❤️ by ma<span className="underline">rkitify </span>
           </p>
         </div>
       </div>

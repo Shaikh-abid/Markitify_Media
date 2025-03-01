@@ -1,227 +1,240 @@
+import Navbar from "@/Components/Navbar";
+import Image from "next/image";
 import React from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import postlogo from "@/app/postlogo.png";
+import call from "@/app/discall.png";
+import sign from "@/app/signature.png";
+import paper from "@/app/paper.png";
+import elements from "@/app/elements.png";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import { useSwiper } from 'swiper/react';
-// import required modules
-import { Pagination } from "swiper/modules";
+import vector from "@/app/vector.png";
+import videoediting from "@/app/videoediting.png";
 
-import play from "@/app/play.jpg";
-import board from "@/app/clapperboard.jpg";
-import code from "@/app/code.jpg";
-import ad from "@/app/ad.jpg";
-import branding from "@/app/branding.jpg";
-import Image from "next/image";
+import Footer from "@/Components/Footer";
 
-import Link from "next/link";
-
-const Timepass = () => {
-  const swiper = useSwiper();
+const Production = () => {
   return (
-    <section className="py-10 sm:py-16 md:py-20 lg:py-24 bg-gray-100">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Section Heading */}
-        <h2 className="text-[36px] sm:text-4xl md:text-5xl font-semibold mb-12 text-gray-800">
-          Our Services
-        </h2>
+    <div>
+      <Navbar />
+      <div className="container mx-auto backdrop-opacity-10 h-[584px] w-full lg:w-[1341px] mt-24 bg-[linear-gradient(to_right,#80808012_3px,transparent_6px),linear-gradient(to_bottom,#80808012_3px,transparent_6px)] bg-[size:66px_66px]">
+        <div className="flex lg:flex-row lg:w-full pt-16 lg:justify-between lg:items-center flex-col w-full items-center lg:text-left text-center">
+          {/* Heading Section */}
+          <div className="mb-8 lg:mb-0">
+            <h1 className="text-4xl  lg:text-5xl font-medium lg:w-[640px] lg:h-[219px] leading-tight tracking-wide  lg:pl-3">
+              We Shape Visions, <br /> Craft Stories—Through <br /> Design and Motion.
+            </h1>
+            <p className="text-sm lg:text-[16px]  lg:h-[99px] lg:w-[462px] lg:mt-8  font-medium mt-4 lg:pl-3">
+              We refine your content with expert editing, sound design, and
+              visuals, delivering a polished and professional final product.
+            </p>
+          </div>
 
-        {/* Cards Slider */}
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={490}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          breakpoints={{
-            // Mobile: Show only one card
-            0: {
-              slidesPerView: 1,
-            },
-            // Tablet: Show two cards
-            768: {
-              slidesPerView: 2,
-            },
-            // Desktop: Default (3 cards)
-            1024: {
-              slidesPerView: 4,
-            },
-          }}
-          className="mySwiper no-pagination-dots"
-        >
-          {/* Card 1 */}
-          <SwiperSlide className="lg:ml-16">
-            <div className="w-[320px] h-[422px] rounded-lg shadow-xl p-4 text-left bg-white ">
-              <div className="mb-4">
-                {/* Icon */}
-                <div className="bg-white shadow-xl w-12 h-12 flex justify-center items-center rounded-lg">
-                  <Image src={play} width={29} height={29} alt="play" />
-                </div>
-              </div>
-              <h3 className="text-[22px] font-semibold text-gray-800 mb-4">
-                Post Production
-              </h3>
-              <p className="lg:text-[12px] font-medium text-sm mb-2">
-                Building brands that go beyond the ordinary, <br /> powered by
-                innovation and bold ideas.
-              </p>
-              <Link
-                className="flex justify-center py-6"
-                href={"postproduction"}
-              >
-                <button className="bg-black text-white px-8 py-2 rounded-lg lg:text-[14px] text-sm font-medium mb-4 hover:bg-gray-800">
-                  Explore more
-                </button>
-              </Link>
-              <ul className="text-black font-medium text-[14px] text-base">
-                <li>Video Editing</li>
-                <li className="mt-3">Graphic Designing</li>
-                <li className="mt-3">Color Correction and Grading</li>
-                <li className="mt-3">Sound Editing and Design</li>
-              </ul>
-            </div>
-          </SwiperSlide>
-
-          {/* Card 2 */}
-          <SwiperSlide className="lg:ml-12" >
-            <div className="w-[320px] h-[422px] bg-white rounded-lg shadow-xl p-4 text-left">
-              <div className="mb-4">
-                <div className="bg-white shadow-xl w-12 h-12 flex justify-center items-center rounded-lg">
-                  <Image src={code} width={29} height={29} alt="code" />
-                </div>
-              </div>
-              <h3 className="text-[22px] font-semibold text-gray-800 mb-4">
-                Design and Development
-              </h3>
-              <p className="lg:text-[12px] text-sm mb-2">
-                Building brands that go beyond the ordinary, powered by
-                innovation and bold ideas.
-              </p>
-              <Link className="flex justify-center py-6" href={"design"}>
-                <button className="bg-black text-white px-8 py-2 rounded-lg lg:text-[14px] text-sm font-medium mb-4 hover:bg-gray-800">
-                  Explore more
-                </button>
-              </Link>
-              <ul className="text-black font-medium lg:text-[14px] text-base">
-                <li>UI/UX Design</li>
-                <li className="mt-3">Development</li>
-                <li className="mt-3">SEO Optimisation</li>
-                <li className="mt-3">Maintenance and Support</li>
-              </ul>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="lg:ml-12">
-            <div className="lg:w-[320px] lg:h-[422px]  mx-auto bg-white rounded-lg shadow-lg p-4 text-left">
-              <div className="mb-4">
-                <div className="bg-white shadow-xl w-12 h-12 flex justify-center items-center rounded-lg">
-                  <Image src={board} width={29} height={29} alt="code" />
-                </div>
-              </div>
-              <h3 className="lg:text-[22px] font-semibold text-gray-800 mb-4">
-                Social Media
-              </h3>
-              <p className="text-gray-800 lg:text-[12px] text-sm mb-2 font-medium">
-                Building connections through engaging campaigns and audience
-                interaction.
-              </p>
-              <Link className="flex justify-center py-6" href={"social"}>
-                <button className="bg-black text-white px-8 py-2 rounded-lg lg:text-[14px] text-sm font-medium mb-4 hover:bg-gray-800">
-                  Explore more
-                </button>
-              </Link>
-              <ul className="text-black font-medium lg:text-[14px]text-base">
-                <li className="mt-4">Youtube</li>
-                <li className="mt-4">Instagram 360</li>
-                <li className="mt-4">Linkedin</li>
-              </ul>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="lg:w-[320px] lg:h-[422px]  mx-auto bg-white rounded-lg shadow-lg p-4 text-left">
-              <div className="mb-4">
-                <div className="bg-white shadow-xl w-12 h-12 flex justify-center items-center rounded-lg">
-                  <Image src={ad} width={29} height={29} alt="code" />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Brand Identity
-              </h3>
-              <p className="text-gray-800 text-sm mb-2">
-                Crafting logos, guidelines, and strategies for a consistent,
-                impactful brand.
-              </p>
-
-              <p className="font-bold text-xl pl-4">
-                $249 <span className="text-base font-normal"> / one time</span>
-              </p>
-              <Link className="flex justify-center py-6" href={"#"}>
-                <button className="bg-black text-white px-24 py-2 rounded-lg text-sm font-bold mb-4 hover:bg-gray-800">
-                  Let's Connect
-                </button>
-              </Link>
-              <ul className="text-black font-semibold text-base">
-                <li>Logo Design</li>
-                <li className="mt-1">Visual Identity Development</li>
-                <li className="mt-1">Brand Guidelined</li>
-                <li className="mt-1">Brand Strategy</li>
-              </ul>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="lg:ml-12">
-            {/* Card last */}
-            <div className="lg:w-[320px] lg:h-[422px]  mx-auto bg-white rounded-lg shadow-lg p-4 text-left">
-              <div className="mb-4">
-                <div className="bg-white shadow-xl w-12 h-12 flex justify-center items-center rounded-lg">
-                  <Image src={branding} width={29} height={29} alt="code" />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Advertisement
-              </h3>
-              <p className="text-gray-800 text-sm mb-2">
-                In addition to our core services, we offer targeted advertising
-                solutions to amplify your brand's reach.
-              </p>
-              <div className="flex justify-center py-6">
-                <button className="bg-black text-white px-24 py-2 rounded-lg text-sm font-bold mb-4 hover:bg-gray-800">
-                  Let's Connect
-                </button>
-              </div>
-              <ul className="text-black font-semibold text-base">
-                <li>Meta Ads</li>
-                <li className="mt-1">Google Ads</li>
-                <li className="mt-1">Instagram Ads</li>
-                <li className="mt-1">Linkedin Ads</li>
-              </ul>
-            </div>
-          </SwiperSlide>
-
-          {/* Add other cards similarly */}
-        </Swiper>
-
-        {/* Dots for navigation */}
-        <div className="flex items-center justify-center mt-20">
-          {/* Green Dot */}
-          <div
-            className="w-6 h-6 bg-green-500 rounded-full cursor-pointer border-4 border-black hover:bg-black hover:border-green-500 hover:border-4 transition-all duration-300"
-            
-          ></div>
-
-          {/* Line */}
-          <div className="w-12 h-1 bg-black"></div>
-
-          {/* Black Dot */}
-          <div className="w-6 h-6 rounded-full cursor-pointer border-4 border-black bg-green-500 hover:bg-black hover:border-green-500 hover:border-4 transition-all duration-300"></div>
+          {/* Image Section */}
+          <div className="h-[300px] sm:h-[343px] w-[300px] sm:w-[343px] lg:w-[612px] lg:h-[583px] container mx-auto">
+            <Image
+              src={postlogo}
+              alt="logo"
+              width={663}
+              height={663}
+              className="lg:pt-24"
+            />
+          </div>
         </div>
       </div>
-    </section>
+
+      <div className="container mx-auto  h-[584px] lg:w-[1341px] mt-56 flex lg:flex-row lg:justify-center  flex-col gap-12">
+        <div className="lg:w-[421px] lg:h-[547px] w-[343px] h-[480px]  bg-gradient-to-b from-[#000000] to-[#393939] text-white  shadow-2xl rounded-xl p-6">
+          {/* Icon Section */}
+          <div className="flex justify-start mb-4 ">
+            <div className="bg-gray-100 p-3 rounded-full">
+              <Image src={vector} alt="vector" />
+            </div>
+          </div>
+
+          {/* Title Section */}
+          <h2 className="lg:text-[22px] font-semibold text-white mb-2">
+            Graphic Designing
+          </h2>
+          <p className="text-sm text-[#A1A1A1] mb-16 lg:text-[14px]  tracking-normal  font-medium h-[40px] w-[301px]">
+            Building brands that go beyond the ordinary, powered by innovation
+            and bold ideas."
+          </p>
+
+          {/* Button */}
+          <div className="flex justify-center ">
+            <button className="w-[296px] h-[39px]  bg-[#FFFFFF] text-[#000000] py-2 rounded-lg text-sm font-medium mb-4 ">
+              Let’s Connect
+            </button>
+          </div>
+
+          {/* Features List */}
+          <ul className="text-sm  space-y-6 font-medium  text-[#E0E0E0] mt-4 lg:text-[15px]">
+            <li>Social media posts</li>
+            <li>background Design</li>
+            <li>Thumbnail Design</li>
+            <li>Flyers Design</li>
+            <li>Logo / Identity Design</li>
+          </ul>
+        </div>
+
+        <div className="lg:w-[421px] lg:h-[547px] w-[343px] h-[480px] bg-gradient-to-b from-[#000000] to-[#393939] text-white  shadow-2xl rounded-xl p-6 font-sans">
+          {/* Icon Section */}
+          <div className="flex justify-start mb-4 ">
+            <div className="bg-[#5A5A5A] p-3 rounded-full">
+              <Image src={videoediting} />
+            </div>
+          </div>
+
+          {/* Title Section */}
+          <h2 className="text-xl font-bold text-white mb-2">Development</h2>
+          <p className="text-sm text-[#A1A1A1] mb-16  tracking-wide font-normal">
+            Building brands that go beyond the ordinary, powered by innovation
+            and bold ideas."
+          </p>
+
+          {/* Button */}
+          <div className="flex justify-center ">
+            <button className="w-[296px] h-[39px]  bg-[#FFFFFF] text-[#000000] py-2 rounded-lg text-sm font-medium mb-4 ">
+              Let’s Connect
+            </button>
+          </div>
+
+          {/* Features List */}
+          <ul className="text-sm  space-y-6 font-semibold text-[#E0E0E0] mt-4">
+            <li>Social media posts</li>
+            <li>background Design</li>
+            <li>Thumbnail Design</li>
+            <li>Flyers Design</li>
+            <li>Logo / Identity Design</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="lg:w-[937px] lg:h-[46px] w-fit h-fit container mx-auto lg:mt-40 mt-96 text-center tracking-wide">
+        <p className="text-[12px] font-medium">
+          Discover Markitify’s expert post-production services, specializing in
+          stunning graphic design and professional video editing. Elevate your
+          brand with captivating visuals and impactful videos. Contact us today!
+        </p>
+      </div>
+
+      <div className="lg:mt-56 mt-[1050px] container mx-auto text-center flex flex-col items-center h-auto lg:h-[360px] ">
+        <h1 className="text-[14px] font-bold text-[#4A4A4A] mb-10">
+          What you will get
+        </h1>
+        <div className="w-full lg:w-[615px] flex flex-col">
+          <div className="flex flex-wrap gap-6 sm:gap-6 justify-center">
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+              Creativity
+            </div>
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+              Strategy
+            </div>
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+              Growth
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-8 sm:gap-6 justify-center mt-4">
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+              Optimization
+            </div>
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+              Analytics
+            </div>
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+              Audience Engagement
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mt-4">
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+            storytelling
+            </div>
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+            Influence
+            </div>
+            <div className="text-[14px] font-semibold bg-[#F2F2F2] px-4 sm:px-6 py-1 border-2 border-dashed rounded-lg">
+            brandingF
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:mt-2 mt-60 mb-44 container mx-auto text-center flex flex-col items-center">
+        <h1 className="text-2xl lg:text-3xl font-bold text-[#4A4A4A] mb-10">
+          Take off in just 4 steps
+        </h1>
+        <div className="lg:flex lg:flex-row lg:gap-8 flex flex-col gap-6 lg:w-[1183px] w-full lg:h-auto lg:rounded-2xl border-y-4 border-x-4 border-dashed p-6 sm:p-12 justify-center items-center">
+          {/* Step 1 */}
+          <div className="w-[300px] sm:w-[260px] h-auto max-h-[200px] bg-white text-black rounded-2xl drop-shadow-2xl p-4">
+            <div className="flex justify-start gap-x-4 items-center">
+              <Image src={call} alt="discover call" width={32} height={32} />
+              <h1 className="font-semibold text-lg lg:text-xl">
+                Discover Call
+              </h1>
+            </div>
+            <p className="font-medium text-[12px] sm:text-[10px] w-full h-auto mt-2 text-left tracking-wider">
+              We start with a conversation to understand your business, goals,
+              and audience. This helps us identify your needs and outline a
+              personalized approach for your project.
+            </p>
+          </div>
+
+          {/* Step 2 */}
+          <div className="w-[300px] sm:w-[260px] h-auto max-h-[200px] bg-[#212121] text-[#D5D5D5] rounded-2xl p-4">
+            <div className="flex justify-start gap-x-4 items-center">
+              <Image src={sign} alt="discover call" width={32} height={32} />
+              <h1 className="font-semibold text-[14px] sm:text-[16px]">
+                Proposal & Agreement
+              </h1>
+            </div>
+            <p className="font-medium text-[12px] sm:text-[10px] w-full h-auto mt-2 text-left tracking-wide">
+              Based on our discussion, we create a detailed proposal with a
+              clear project scope, timelines, and deliverables. Once you
+              approve, we finalize the agreement to move forward confidently.
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="w-[300px] sm:w-[260px] h-auto max-h-[200px] bg-white text-black rounded-2xl drop-shadow-2xl p-4">
+            <div className="flex justify-start gap-x-4 items-center">
+              <Image
+                src={elements}
+                alt="discover call"
+                width={32}
+                height={32}
+              />
+              <h1 className="font-semibold text-[14px] sm:text-[16px]">
+                Collaboration/Approval
+              </h1>
+            </div>
+            <p className="font-medium text-[12px] sm:text-[10px] w-full h-auto mt-2 text-left tracking-wider">
+              We start with a conversation to understand your business, goals,
+              and audience. This helps us identify your needs and outline a
+              personalized approach for your project.
+            </p>
+          </div>
+
+          {/* Step 4 */}
+          <div className="w-[300px] sm:w-[260px] h-auto max-h-[200px] bg-[#212121] text-[#D5D5D5] rounded-2xl drop-shadow-2xl p-4">
+            <div className="flex justify-start gap-x-4 items-center">
+              <Image src={paper} alt="discover call" width={32} height={32} />
+              <h1 className="font-semibold text-[14px] sm:text-[16px]">
+                Take Off
+              </h1>
+            </div>
+            <p className="font-medium text-[12px] sm:text-[10px] w-full h-auto mt-3 text-left tracking-wider">
+              We start with a conversation to understand your business, goals,
+              and audience. This helps us identify your needs and outline a
+              personalized approach for your project.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
   );
 };
 
-export default Timepass;
+export default Production;

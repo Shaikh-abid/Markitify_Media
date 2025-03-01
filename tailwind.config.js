@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        helvetica: ["Helvetica Neue", "sans-serif"],
+      },
       animation: {
         "loop-scroll": "loop-scroll 25s linear infinite",
       },
@@ -75,5 +78,5 @@ module.exports = {
     },
     plugins: [],
   },
-  plugins: [require("tailwindcss-animate"),],
+  plugins: [require("tailwindcss-animate")],
 };
